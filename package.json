@@ -1,0 +1,16 @@
+{
+  "name": "draw",
+  "version": "1.0.0",
+  "description": "connect to node server and let you draw shit",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "gaurav",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^1.7.3"
+  }
+}
