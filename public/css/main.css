@@ -1,22 +1,73 @@
+body{
+  background : url("backg.png");
+
+}
+
+.extrameal{
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px 10px 20px;
+  border: 2px solid #FECD08;
+  background: none;
+  outline: none;
+  border-radius: 20px;
+  color: #FECD08;
+  left: 800px;
+  top: 330px!important;
+}
 
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+.extrameal:hover{
+  background: rgba(151, 163, 168,.1);
+  border: 2px solid #FECD08;
+  color: #FECD08;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.overlay {
+  position: fixed;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  visibility: hidden;
+  -webkit-transition: opacity .35s, visibility .35s, width .35s;
+  transition: opacity .35s, visibility .35s, width .35s;
+  z-index: 100;
+}
+.overlay:before {
+  content: '';
+  background: #FF5252;
+  left: -55%;
+  top: 30px;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  -webkit-transition: left .35s ease;
+  transition: left .35s ease;
+}
+.overlay:after {
+  content: '';
+  background:#FF5252;
+  right: -55%;
+  top: 30px;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+}
+.overlay.open {
+  top: 30px;
+  opacity: .6;
+  visibility: visible;
+  height: 100%;
+}
+.overlay.open:before {
+  top: 30px;
+  left: 0;
+}
+.overlay.open:after {
+  top: 30px;
+  right: 0;
+}
